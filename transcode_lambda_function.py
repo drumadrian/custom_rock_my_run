@@ -144,7 +144,7 @@ def get_fake_input():
 
 def lambda_handler(event, context):
     
-    input_event =  get_fake_input()
+    # input_event =  get_fake_input()
     # event = input_event
 
     pipeline_id = os.environ['target_pipeline_id']
