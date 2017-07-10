@@ -5,7 +5,7 @@ PATH_TO_PODCAST_XML=/Users/adrian/Documents/DJing\ Stuff/podcast\ xml\ file
 
 ##################################################################
 # ToDo:  
-#	-save path to files in variable by finding workaround for space in path to folder
+#	-save path to files in variable by finding workaround for space in path to folder [Done]
 ##################################################################
 
 
@@ -25,7 +25,7 @@ echo ''
 # cd /Users/adrian/Documents/DJing\ Stuff/SeratoDJRecordFiles
 cd "$PATH_TO_DJ_RECORDINGS"
 # pwd
-aws s3 sync . s3://83pluspro-raw-recordings --exclude .DS_Store
+aws s3 sync . s3://83pluspro-raw-recordings --exclude "script.bash" --exclude ".DS_Store"
 
 
 
@@ -44,7 +44,7 @@ echo ''
 # cd /Users/adrian/Documents/DJing\ Stuff/podcast\ xml\ file
 cd "$PATH_TO_PODCAST_XML"
 # pwd
-aws s3 sync . s3://83pluspro.com/podcast --exclude .DS_Store
+aws s3 sync . s3://83pluspro.com/podcast --exclude ".DS_Store"
 
 
 
